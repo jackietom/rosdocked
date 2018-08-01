@@ -19,6 +19,8 @@ docker run\
   -e SHELL\
   -e DISPLAY\
   -e DOCKER=1\
+  --privileged\
+  -v /dev/bus/usb:/dev/bus/usb\
   -v "$HOME:$HOME:rw"\
   -v "/tmp/.X11-unix:/tmp/.X11-unix:rw"\
   -it $1 $SHELL
